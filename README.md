@@ -3,7 +3,8 @@ The python unittest template generator creates a template file for the unittest 
 
 ## Features ##
 - **Support classes and global methods**: For each class in the file, a new test class is created as a subclass of unittest.TestCase. For every method within this class, an individual test method is added. If there are any global methods in the python file, an extra class TestGlobalMethods is added, containing a test method for each global method.
-- **Intuitive naming convention**: All test case classes are named "Test{OriginalClassName}". All methods are named "todo_test_{original_method_name}", with leading and trailing underscores being trimmed. Using the prefix "todo_" leads to the test method being ignored by the unittest framework, which enables the user to only activate the tests that are already implemented.
+- **Intuitive naming convention**: All test case classes are named "Test{OriginalClassName}". All methods are named "test_{original_method_name}", with leading and trailing underscores being trimmed.
+- **Create setUp and tearDown methods**: For each class, setUp and tearDown methods are automatically created. These are used within the unittest package to encapsulates repeated tasks that have to be done before or after every test case.
 - **Docstring support**: Each test class and method gets a docstring that holds information about the original class or method (for example the method's syntax).
 - **PEP 8 support**: The created file is compatible with the styleguide defined in PEP 8.
 

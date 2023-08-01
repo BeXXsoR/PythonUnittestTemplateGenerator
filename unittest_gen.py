@@ -22,7 +22,7 @@ def create_setup_and_tear_down(tab: str) -> str:
 
 def create_method_texts(tab: str, start: str, groups: list[str]) -> str:
     """Create the methods texts"""
-    trg_text = start + f"def todo_test_{groups[1].strip('_')}(self):" + NEW_LINE
+    trg_text = start + f"def test_{groups[1].strip('_')}(self):" + NEW_LINE
     trg_text += start + tab + f'"""Test the method {groups[0]}"""' + NEW_LINE
     trg_text += start + tab + "self.fail()" + NEW_LINE
     return trg_text
