@@ -14,7 +14,7 @@ NEW_LINE = "\n"
 
 # ----- Methods --------
 def create_setup_and_tear_down(tab: str) -> str:
-    """Crate the setup and tear down methods."""
+    """Create the setup and tear down methods."""
     trg_text = tab + "def setUp(self) -> None:" + NEW_LINE + tab + tab + "pass" + NEW_LINE * 2
     trg_text += tab + "def tearDown(self) -> None:" + NEW_LINE + tab + tab + "pass" + NEW_LINE * 2
     return trg_text
